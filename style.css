@@ -158,6 +158,28 @@ body {
     justify-content: space-between;
 }
 
-.features__section__elements .elements:nth-child(2n+1) {
+.elements:nth-child(2n + 1) {
     flex-direction: row-reverse;
 }
+
+/** Learn More Setion **/
+.learn__more__title, .install__about__section__title,
+.install__about__section__paragraph{
+    text-align: center;
+}
+
+.install__about__section {
+    display: flex;
+}
+
+.install__section, .about__section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.img__install__about__section {
+    align-self: center;
+    width: 80%;
+}
+

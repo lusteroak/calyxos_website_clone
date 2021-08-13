@@ -24,6 +24,12 @@ body {
     background-color: var(--color-white);
 }
 
+/** Helper **/
+
+.__element {
+    text-decoration: underline;
+}
+
 /* Header */
 
 .main__header {
@@ -137,4 +143,21 @@ body {
 .sub__hero__p {
     text-align: center;
     font-size: 1.6rem;
+}
+
+/** Features Section **/
+.features__section__elements {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 2rem;
+    grid-auto-flow: dense;
+}
+
+.elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__section__elements .elements:nth-child(2n+1) {
+    flex-direction: row-reverse;
 }

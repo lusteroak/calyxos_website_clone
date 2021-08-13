@@ -1,0 +1,140 @@
+/* Base */
+:root {
+    --font: Helvetica, Arial, sans-serif;
+    --color-green: #628026;
+    --color-green-dark: #3b4e15;
+    --color-gray: #f4f4f4;
+    --color-white: #ffffff;
+    --color-dark: #333333;
+    --color-light: #ffffff80;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--color-white);
+}
+
+/* Header */
+
+.main__header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav__bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 .5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.main__logo {
+    align-self: center;
+}
+
+.main__logo__a {
+    font-weight: bolder;
+}
+
+.main__logo__a,
+.nav__bar__a {
+    color: var(--color-dark)
+}
+
+.nav__bar__ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__bar__li {
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.main__logo__a,
+.nav__bar__a {
+    text-decoration: none;
+}
+
+.main__logo__a:hover,
+.nav__bar__a:hover {
+    text-decoration: underline;
+}
+
+.nav__bar__li__a__button {
+    color: var(--color-white);
+    align-self: center;
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: var(--color-green);
+    text-decoration: none;
+}
+
+.nav__bar__li__a__button:hover {
+    background-color: var(--color-green-dark);
+    text-decoration: none;
+}
+
+
+
+.nav__bar__li__button,
+.nav__bar__li__button a {
+    color: var(--color-white);
+}
+
+/* Main */
+
+/** Container **/
+.container {
+    padding-top: 10rem;
+}
+
+/** Hero **/
+.hero {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+/** Hero Title & Subtitle **/
+
+.hero__title {
+    width: 30rem;
+    font-size: 5rem;
+}
+
+.hero__subtitle {
+    width: 35rem;
+}
+
+/** Hero Image **/
+
+.hero__image {
+    width: 25rem;
+}
+
+/** Sub Hero Paragraph **/
+
+.sub__hero {
+    padding: 5rem 22rem;
+}
+
+
+.sub__hero__p {
+    text-align: center;
+    font-size: 1.6rem;
+}

@@ -24,6 +24,10 @@ body {
     background-color: var(--color-white);
 }
 
+::selection {
+    background-color: var(--color-green);
+}
+
 /** Helper **/
 
 .__element {
@@ -43,7 +47,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 .5rem;
+    padding: 0 2rem;
     background-color: rgba(255, 255, 255, 0.5);
 
 }
@@ -106,31 +110,45 @@ body {
 
 /** Container **/
 .container {
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 
 /** Hero **/
 .hero {
     display: flex;
-    padding: 0 2rem;
+    padding: 1rem 2.5rem;
     justify-content: space-between;
 }
 
 /** Hero Title & Subtitle **/
+.hero__title__subtitle {
+    padding: 0;
+}
 
 .hero__title {
     width: 30rem;
     font-size: 5rem;
+    margin: 0;
+    padding-top: 3rem;
 }
 
 .hero__subtitle {
-    width: 35rem;
+    font-size: 1.15rem;
+    width: 40rem;
+    line-height: 1.5rem;
+}
+
+.title__colored {
+    padding-top: .25rem;
+    background-color: var(--color-green);
+    border-top-left-radius: .20rem;
+    border-bottom-right-radius: .20rem;
 }
 
 /** Hero Image **/
 
 .hero__image {
-    width: 25rem;
+    width: 23.5rem;
 }
 
 /** Sub Hero Paragraph **/
@@ -142,10 +160,20 @@ body {
 
 .sub__hero__p {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
 }
 
 /** Features Section **/
+.features__section {
+    padding-top: 1rem;
+    margin: 2rem;
+}
+
+.features__title {
+    font-size: 2.5rem;
+}
+
 .features__section__elements {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -156,10 +184,22 @@ body {
 .elements {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
 }
 
-.elements:nth-child(2n + 1) {
+.elements:nth-child(2n+2) {
     flex-direction: row-reverse;
+}
+
+.text__elements__title {
+    font-size: 2rem;
+}
+text__elements__paragraph__1
+text__elements__paragraph__2
+
+img .image__elements {
+    width: 10rem;
 }
 
 /** Learn More Setion **/

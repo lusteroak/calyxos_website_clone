@@ -1,12 +1,14 @@
 /* Base */
 :root {
     --font: Helvetica, Arial, sans-serif;
+    --color-header: #ffffffcc;
     --color-green: #628026;
     --color-green-dark: #3b4e15;
     --color-gray: #f4f4f4;
     --color-white: #ffffff;
     --color-dark: #333333;
     --color-light: #ffffff80;
+    --color-light-botton: #b4b4b494;
 }
 
 *,
@@ -24,10 +26,36 @@ body {
     background-color: var(--color-white);
 }
 
+::selection {
+    background-color: var(--color-green);
+}
+
 /** Helper **/
 
 .__element {
     text-decoration: underline;
+}
+.__btn__center {
+    align-self: center;
+}
+
+.__little__font {
+    font-size: 12px;
+}
+
+.button {
+    color: var(--color-green);
+    border-radius: .5rem;
+    border: 1px var(--color-gray) solid;
+    padding: 1rem;
+    background-color: var(--color-white);
+    text-decoration: none;
+    width: fit-content;
+}
+
+.button:hover {
+    background-color: var(--color-gray);
+    box-shadow: 1px 1px 2px 2px var(--color-light-botton);
 }
 
 /* Header */
@@ -43,8 +71,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 .5rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0 2rem;
+    background-color: rgba(255, 255, 255, .8);
 
 }
 
@@ -106,31 +134,47 @@ body {
 
 /** Container **/
 .container {
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 
 /** Hero **/
 .hero {
     display: flex;
-    padding: 0 2rem;
+    padding: 1rem 2.5rem;
     justify-content: space-between;
 }
 
 /** Hero Title & Subtitle **/
+.hero__title__subtitle {
+    padding: 0;
+}
 
 .hero__title {
     width: 30rem;
     font-size: 5rem;
+    margin: 0;
+    padding-top: 3rem;
 }
 
 .hero__subtitle {
-    width: 35rem;
+    font-size: 1.15rem;
+    width: 40rem;
+    line-height: 1.5rem;
+}
+
+.title__colored {
+    padding-top: .25rem;
+    background-color: var(--color-green);
+    border-top-left-radius: .20rem;
+    border-bottom-right-radius: .20rem;
 }
 
 /** Hero Image **/
 
+
+
 .hero__image {
-    width: 25rem;
+    width: 23.5rem;
 }
 
 /** Sub Hero Paragraph **/
@@ -142,10 +186,20 @@ body {
 
 .sub__hero__p {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
 }
 
 /** Features Section **/
+.features__section {
+    padding-top: 1rem;
+    margin: 2rem;
+}
+
+.features__title {
+    font-size: 2.5rem;
+}
+
 .features__section__elements {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -156,8 +210,160 @@ body {
 .elements {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
 }
 
-.features__section__elements .elements:nth-child(2n+1) {
+.elements:nth-child(2n+2) {
     flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.text__elements {
+    width: 30rem;
+}
+
+.text__elements__title {
+    font-size: 1.5rem;
+}
+.text__elements__paragraph__1 {
+
+}
+
+.text__elements__paragraph__2 {
+
+}
+
+.image__elements {
+    width: 32rem;
+    padding: 0;
+    margin-right: 3rem;
+}
+
+/** Learn More Setion **/
+.learn__more__section {
+    padding-top: 10rem;
+}
+
+.learn__more__title {
+    font-size: 2.5rem;
+}
+
+.text__container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.install__about__section__title {
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.install__about__section__paragraph {
+    padding: 0;
+    font-size: .8rem;
+}
+
+.learn__more__title, .install__about__section__title,
+.install__about__section__paragraph{
+    text-align: center;
+}
+
+.install__about__section {
+    display: flex;
+}
+
+.install__section, .about__section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.img__install__about__section {
+    align-self: center;
+    width: 90%;
+}
+
+/** Recent Research Section **/
+.recent__research__section {
+    padding: 10rem 2rem;
+}
+
+.recent__research__container {
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+}
+
+.recent__research__main__title {
+    font-size: 2.5rem;
+}
+
+.recent__research__title {
+    font-size: 1.5rem;
+}
+
+.recent__research__paragraph {
+    width: 50%;
+}
+
+/** Recent News Section **/
+.recent__news__section {
+    padding: 2.5rem;
+    padding-bottom: 5rem;
+}
+
+.recent__news__container {
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    padding-bottom: 0;
+}
+
+.recent__news__main__title {
+    font-size: 2.5rem;
+}
+
+.recent__news__data {
+    padding-bottom: 2rem;
+}
+.recent__news__date {}
+
+.recent__news__subtitle {
+    font-size: 1.7rem;
+}
+
+.recent__news__paragraph {
+    font-size: 1rem;
+    width: 50%;
+}
+
+.recent__research__paragraph {
+    width: 50%;
+}
+
+/** Become Member Section **/
+.become__member__section {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray);
+}
+
+.become__member__paragraph {
+    width: 40rem;
+}
+
+/** Footer Section **/
+.footer__section {
+    padding: 10rem 3rem 1rem;
+
+}
+
+.footer__section p {
+    line-height: .5rem;
+    font-size: .75rem;
 }

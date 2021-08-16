@@ -1,1 +1,2 @@
-# calyxos_website_clone
+# CalyxOS Website Clone
+### Cloning the main page of [CalyxOS](https://calyxos.org/)

@@ -1,6 +1,7 @@
 /* Base */
 :root {
     --font: Helvetica, Arial, sans-serif;
+    --color-header: #ffffffcc;
     --color-green: #628026;
     --color-green-dark: #3b4e15;
     --color-gray: #f4f4f4;
@@ -71,7 +72,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 2rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, .8);
 
 }
 
@@ -286,7 +287,7 @@ body {
 
 /** Recent Research Section **/
 .recent__research__section {
-    padding: 20rem 3rem;
+    padding: 10rem 2rem;
 }
 
 .recent__research__container {
@@ -305,4 +306,64 @@ body {
 
 .recent__research__paragraph {
     width: 50%;
+}
+
+/** Recent News Section **/
+.recent__news__section {
+    padding: 2.5rem;
+    padding-bottom: 5rem;
+}
+
+.recent__news__container {
+    display: flex;
+    flex-direction: column;
+    justify-self: left;
+    padding-bottom: 0;
+}
+
+.recent__news__main__title {
+    font-size: 2.5rem;
+}
+
+.recent__news__data {
+    padding-bottom: 2rem;
+}
+.recent__news__date {}
+
+.recent__news__subtitle {
+    font-size: 1.7rem;
+}
+
+.recent__news__paragraph {
+    font-size: 1rem;
+    width: 50%;
+}
+
+.recent__research__paragraph {
+    width: 50%;
+}
+
+/** Become Member Section **/
+.become__member__section {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray);
+}
+
+.become__member__paragraph {
+    width: 40rem;
+}
+
+/** Footer Section **/
+.footer__section {
+    padding: 10rem 3rem 1rem;
+
+}
+
+.footer__section p {
+    line-height: .5rem;
+    font-size: .75rem;
 }
